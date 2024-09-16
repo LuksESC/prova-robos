@@ -13,6 +13,16 @@ public class RoboEnfermeiro extends RoboSaude {
     this.nome = no;
   }
 
+  public boolean administrarMedicamento(int quantidade) {
+    if (quantidade > 0) {
+      for (int i = 0; i < quantidade; i++) {
+        System.out.println("O robo enfermeiro " + this.getNome() + " esta administrando o medicamento " + i);
+      }
+      return true;
+    }
+    return false;
+  }
+
   @Override
   public void recarregar() {
     System.out.println(" O robo enfermeiro " + this.getNome() + " esta descansando");
